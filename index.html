@@ -1,211 +1,348 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SilverPoly</title>
-    <link rel="stylesheet" href="style.css" >
-  </head>
-  <body>
-    <div class="main-container">
-      <!-- navbar part -->
-      <div class="navbar">
-        <h1>SilverPoly</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourBrand - Build Something Amazing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>YourBrand</h1>
+                </div>
 
-        <div class="feature">
-          <a>Home</a>
-          <a>Features</a>
-          <a>About</a>
-          <a>Contact</a>
-          <button>Get Started</button>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('home')" class="nav-link">Home</button>
+                    <button onclick="scrollToSection('features')" class="nav-link">Features</button>
+                    <button onclick="scrollToSection('about')" class="nav-link">About</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+                    <button class="btn btn-primary btn-sm">Get Started</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-nav" class="nav-mobile">
+                <button onclick="scrollToSection('home')" class="nav-link-mobile">Home</button>
+                <button onclick="scrollToSection('features')" class="nav-link-mobile">Features</button>
+                <button onclick="scrollToSection('about')" class="nav-link-mobile">About</button>
+                <button onclick="scrollToSection('contact')" class="nav-link-mobile">Contact</button>
+                <button class="btn btn-primary btn-sm btn-full">Get Started</button>
+            </nav>
         </div>
+    </header>
 
-        <div class="hidden">
-          <i class="bi bi-list"></i>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Text Content -->
+                    <div class="hero-text">
+                        <h1 class="hero-heading">Build Something Amazing Today</h1>
+                        <p class="hero-paragraph">
+                            Transform your ideas into reality with our innovative solutions. 
+                            We help businesses grow and succeed in the digital age.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary btn-lg" onclick="scrollToSection('contact')">Get Started</button>
+                            <button class="btn btn-outline btn-lg" onclick="scrollToSection('about')">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Hero Image -->
+                    <div class="hero-image-container">
+                        <div class="image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtd29ya3xlbnwxfHx8fDE3NzQ2ODU0MTV8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                                 alt="Team collaboration" 
+                                 class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Us</h2>
+                    <p class="section-description">
+                        Discover the features that make us the preferred choice for businesses worldwide.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1: Lightning Fast -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-description">Optimized performance that keeps your business moving at the speed of light.</p>
+                    </div>
+
+                    <!-- Feature 2: Secure & Reliable -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Secure & Reliable</h3>
+                        <p class="feature-description">Enterprise-grade security to protect your data and give you peace of mind.</p>
+                    </div>
+
+                    <!-- Feature 3: Team Collaboration -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Team Collaboration</h3>
+                        <p class="feature-description">Work seamlessly with your team from anywhere in the world.</p>
+                    </div>
+
+                    <!-- Feature 4: Growth Focused -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Growth Focused</h3>
+                        <p class="feature-description">Tools and insights designed to help your business scale efficiently.</p>
+                    </div>
+
+                    <!-- Feature 5: Global Reach -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Global Reach</h3>
+                        <p class="feature-description">Connect with customers and partners across the globe effortlessly.</p>
+                    </div>
+
+                    <!-- Feature 6: Award Winning -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Award Winning</h3>
+                        <p class="feature-description">Recognized excellence in innovation and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Image -->
+                    <div class="about-image-container">
+                        <div class="image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600711416054-ef1cfc2c1dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwaW5ub3ZhdGlvbiUyMGZ1dHVyZXxlbnwxfHx8fDE3NzQ3MTA3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                                 alt="Innovation and technology"
+                                 class="about-image">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="about-content">
+                        <h2 class="about-title">About Our Company</h2>
+                        <p class="about-text">
+                            We're a team of passionate innovators dedicated to creating 
+                            solutions that make a difference. With years of experience and 
+                            a commitment to excellence, we help businesses navigate the 
+                            digital landscape.
+                        </p>
+                        <p class="about-text">
+                            Our mission is to empower organizations with cutting-edge 
+                            technology and exceptional service. We believe in building 
+                            lasting partnerships and delivering value that exceeds expectations.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Team Members</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="section-header">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-description">
+                            Have a question or want to work together? We'd love to hear from you.
+                        </p>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project..." rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <h3 class="footer-heading">YourBrand</h3>
+                    <p class="footer-text">
+                        Building innovative solutions for modern businesses.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home</a></li>
+                        <li><a href="#features" class="footer-link">Features</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@yourbrand.com</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>123 Business St, City</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> YourBrand. All rights reserved.</p>
+            </div>
         </div>
-      </div>
+    </footer>
 
-      <div class="main-content">
-        <div class="content-part">
-          <h1>
-            <span class="text">Build</span>
-            <span class="text"> Something Amazing</span>
-            <span class="text"> Today</span>
-          </h1>
-
-          <p>
-            Transform your ideas into reality with our innovative solutions. We
-            help businesses grow and succeed in the digital age.
-          </p>
-
-          <div class="buttondiv">
-            <button class="btne">Get Started</button>
-            <button class="btnw">Learn More</button>
-          </div>
-        </div>
-
-        <div class="imagediv">
-          <img
-            src="https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtd29ya3xlbnwxfHx8fDE3NzQ2ODU0MTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-          />
-        </div>
-      </div>
-
-      <!-- Why Choose Us -->
-      <div class="why-choiceu">
-        <div class="second-contain">
-          <h2 class="choose">Why Choose Us</h2>
-          <p>
-            Discover the features that make us the preferred choice for
-            businesses worldwide.
-          </p>
-
-          <div class="for-all-featu">
-            <div class="itfeature">
-              <div class="lighting-fast">
-                <i class="bi bi-lightning-fill"></i>
-              </div>
-              <h2>Lightning Fast</h2>
-              <div class="wordpart">
-                Optimized performance that keeps your business moving at the
-                speed of light.
-              </div>
-            </div>
-
-            <div class="itfeature">
-              <div class="lighting-fast">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <h2>Secure & Reliable</h2>
-              <div class="wordpart">
-                Enterprise-grade security to protect your data and give you
-                peace of mind.
-              </div>
-            </div>
-
-            <div class="itfeature">
-              <div class="lighting-fast">
-                <i class="bi bi-people"></i>
-              </div>
-              <h2>Team Collaboration</h2>
-              <div class="wordpart">
-                Work seamlessly with your team from anywhere in the world.
-              </div>
-            </div>
-
-            <div class="itfeature">
-              <div class="lighting-fast">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <h2>Growth Focused</h2>
-              <div class="wordpart">
-                Tools and insights designed to help your business scale
-                efficiently.
-              </div>
-            </div>
-
-            <div class="itfeature">
-              <div class="lighting-fast">
-                <i class="bi bi-globe"></i>
-              </div>
-              <h2>Global Reach</h2>
-              <div class="wordpart">
-                Connect with customers and partners across the globe
-                effortlessly.
-              </div>
-            </div>
-
-            <div class="itfeature">
-              <div class="lighting-fast">
-                <i class="bi bi-award"></i>
-              </div>
-              <h2>Award Winning</h2>
-              <div class="wordpart">
-                Recognized excellence in innovation and customer satisfaction.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- About the company -->
-      <div class="about-container">
-        <div class="text-image">
-          <div class="image-own">
-            <img
-              class="immg"
-              src="https://images.unsplash.com/photo-1600711416054-ef1cfc2c1dba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwaW5ub3ZhdGlvbiUyMGZ1dHVyZXxlbnwxfHx8fDE3NzQ3MTA3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            />
-          </div>
-
-          <div class="text-side">
-            <h1>About Our Company</h1>
-            <p>
-              We're a team of passionate innovators dedicated to creating
-              solutions that make a difference. With years of experience and a
-              commitment to excellence, we help businesses navigate the digital
-              landscape.
-            </p>
-            <p>
-              Our mission is to empower organizations with cutting-edge
-              technology and exceptional service. We believe in building lasting
-              partnerships and delivering value that exceeds expectations.
-            </p>
-
-            <div class="member-side">
-              <div class="first-one">
-                <div class="num">500+</div>
-                <div class="clients">Happy Clients</div>
-              </div>
-
-              <div class="first-one">
-                <div class="num">10+</div>
-                <div class="clients">Years Experience</div>
-              </div>
-
-              <div class="first-one">
-                <div class="num">50+</div>
-                <div class="clients">Team Members</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contant -->
-
-      <div class="contact-part">
-        <div class="mimi-part">
-          <div class="get-in">
-            <h2>Get In Touch</h2>
-            <p>
-              Have a question or want to work together? We'd love to hear from
-              you.
-            </p>
-          </div>
-
-          <div class="input-part">
-            <div class="label">
-              <label>Name</label>
-              <input type="text" placeholder="Your Name" />
-            </div>
-
-            <div class="label">
-              <label>Email</label>
-              <input type="email" placeholder="your.email@example.com" />
-            </div>
-
-            <div class="label" id="mess">
-              <label>Message</label>
-              <input type="text" placeholder="Tell us about your project" />
-            </div>
-
-            <button class="send-mess">Send Message</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+    <script src="index.js">
+    </script>
+</body>
 </html>
