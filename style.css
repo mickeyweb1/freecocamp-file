@@ -1,0 +1,284 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 100;
+}
+
+.navbar h1 {
+  font-family: serif;
+}
+
+.feature {
+  display: none;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.feature a {
+  color: #374151;
+}
+
+.feature button {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: block;
+}
+
+/* HERO SECTION */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 6em 1em 2em;
+  background: hsl(214, 100%, 97%);
+}
+
+.content-part {
+  flex: 1;
+  min-width: 280px;
+}
+
+.content-part h1 {
+  font-size: 2.2em;
+  font-family: serif;
+}
+
+.content-part h1 span {
+  display: block;
+  font-weight: bold;
+}
+
+.content-part p {
+  margin-top: 1em;
+  color: #4b5563;
+}
+
+.buttondiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.5em;
+}
+
+.btne,
+.btnw {
+  padding: 0.8em;
+  border-radius: 8px;
+  border: none;
+}
+
+.btne {
+  background: #111827;
+  color: white;
+}
+
+.btnw {
+  background: white;
+  color: #111827;
+  border: 1px solid #ddd;
+}
+
+/* IMAGE */
+.imagediv {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.imagediv img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* WHY CHOOSE US */
+.why-choiceu {
+  padding: 4em 1em;
+  text-align: center;
+}
+
+.second-contain {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.choose {
+  font-size: 28px;
+  margin-bottom: 0.5em;
+}
+
+.second-contain p {
+  margin-bottom: 2em;
+  color: #4b5563;
+}
+
+.for-all-featu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.itfeature {
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.itfeature:hover {
+  transform: translateY(-5px);
+}
+
+.lighting-fast {
+  width: 40px;
+  height: 40px;
+  background: #e0ecff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* ABOUT */
+.about-container {
+  background: #f9fafb;
+  padding: 4em 1em;
+}
+
+.text-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.image-own,
+.text-side {
+  flex: 1;
+  min-width: 280px;
+}
+
+.image-own img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-side h1 {
+  font-size: 28px;
+  margin-bottom: 1em;
+}
+
+.member-side {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 1.5em;
+  flex-wrap: wrap;
+}
+
+.num {
+  color: #2563eb;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* CONTACT */
+.contact-part {
+  padding: 4em 1em;
+  text-align: center;
+}
+
+.input-part {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+input {
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.send-mess {
+  padding: 0.8em;
+  border: none;
+  background: #111827;
+  color: white;
+  border-radius: 6px;
+}
+
+/* ===================== */
+/* TABLET */
+@media (min-width: 768px) {
+  .feature {
+    display: flex;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .buttondiv {
+    flex-direction: row;
+  }
+
+  .content-part h1 {
+    font-size: 3em;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .choose {
+    font-size: 36px;
+  }
+
+  .text-side h1 {
+    font-size: 36px;
+  }
+}
